@@ -1,0 +1,41 @@
+#=========================================================>
+#  _____ ______   ____  ____    _____ __ __  ____  ____
+# / ___/|      T /    T|    \  / ___/|  T  Tl    j|    \
+#(   \_ |      |Y  o  ||  D  )(   \_ |  l  | |  T |  o  )
+# \__  Tl_j  l_j|     ||    /  \__  T|  _  | |  | |   _/
+# /  \ |  |  |  |  _  ||    \  /  \ ||  |  | |  | |  |
+# \    |  |  |  |  |  ||  .  Y \    ||  |  | j  l |  |
+#  \___j  l__j  l__j__jl__j\_j  \___jl__j__j|____jl__j
+#
+#
+#                       Starship Config
+#=========================================================>
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+format ="""
+[ 󰻳 fish ](blue) [  ](green) [ 󰣇 ](blue) $hostname[natpunk](bold blue)[@](blue)[morpeko](bold blue)  \
+$directory\
+$character\
+"""
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name f the module we are configuring is 'character'
+success_symbol = '  [❯](bold blue) ' # The 'success_symbol' segment is being set to '➜' with the co
+
+[directory]
+truncation_length = 8
+truncation_symbol = '…/'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[hostname]
+ssh_only = true
+ssh_symbol = "󰣀 "
+trim_at = "."
+format = "[$ssh_symbol]($style)"
+style = "blue dimmed bold"
+disabled = false
