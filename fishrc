@@ -1,0 +1,29 @@
+if status is-interactive
+    alias archinfo='pokemon-colorscripts.sh --name umbreon'
+    alias mail='neomutt'
+    alias jan='cal -m 01'
+    alias feb='cal -m 02'
+    alias mar='cal -m 03'
+    alias apr='cal -m 04'
+    alias may='cal -m 05'
+    alias jun='cal -m 06'
+    alias jul='cal -m 07'
+    alias aug='cal -m 08'
+    alias sep='cal -m 09'
+    alias oct='cal -m 10'
+    alias nov='cal -m 11'
+    alias dec='cal -m 12'
+    alias ls='ls --color=auto -Fh'
+    alias grep='grep --color=auto'
+    alias ll='ls -l'
+    alias psa='ps -eHo user,pid,args'
+    alias psg='psa | grep -v grep | grep'
+    alias dots='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+    alias ls-more='ls -la'
+    alias weather='wttr-status'
+    set -Ux EDITOR vim
+    set -Ux VISUAL vim
+    set fish_greeting
+    starship init fish | source
+    # Commands to run in interactive sessions can go here
+end
